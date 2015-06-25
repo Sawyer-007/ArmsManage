@@ -1,11 +1,10 @@
 <?php
-//已登录页面，显示登录用户名
 if(!isset($_COOKIE['username'])){
-    echo 'You are Logged as '.$_COOKIE['username'].'<br/>';
-    //点击“Log Out”，则转到logOut.php页面进行cookie的注销
+    echo "<script>
+    alert('请登录!');
+    </script>";
+    header("location: ../index.php");
 }
-/**在已登录页面中，可以利用用户的cookie如$_COOKIE['username']、
- * $_COOKIE['user_id']对数据库进行查询，可以做好多好多事情*/
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,23 +43,7 @@ if(!isset($_COOKIE['username'])){
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.php">
-                    <img src="src/logo.jpg" alt="Brand" style="margin-top: -15px">
-                </a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse pull-right">
-                <ul class="nav navbar-nav">
-                    <li><a href="#"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;关于我们</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;投诉建议</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;登录</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+    <?php include 'header.php';?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-2 sidebar">

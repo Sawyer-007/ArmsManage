@@ -21,7 +21,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title headingModal">装备管理系统入口</h4>
                 </div>
-                <form method="post" action="data/login2.php">
+                <form method="post" action="data/login.php">
                     <div class="modal-body">
                         <input type="text" id="inputLogin" name="user" class="form-control" placeholder="Username" required autofocus >
                         <input type="password" id="inputPsw" name="psd" class="form-control" placeholder="Password" required>
