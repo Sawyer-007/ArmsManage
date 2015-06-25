@@ -83,14 +83,6 @@ echo '
                     <div class="modal-body">
                         <label>装备编号</label>
                         <input type="text" id="inputUpZbid" name="upzbid" class="form-control" placeholder="要修改的装备编号" required autofocus >
-                        <label>装备名称</label>
-                        <input type="text" id="inputUpZbname" name="upzbname" class="form-control" placeholder="修改后的装备名称" required >
-                        <label>规格编号</label>
-                        <input type="text" id="inputUpZbspec" name="upzbspec" class="form-control" placeholder="修改后的规格编号" required >
-                        <label>装备类别</label>
-                        <input type="text" id="inputUpZbkind" name="upzbkind" class="form-control" placeholder="修改后的装备类别" required >
-                        <label>计量单位</label>
-                        <input type="text" id="inputUpZbunit" name="upzbunit" class="form-control" placeholder="修改后的计量单位" required >
                     </div>
                     <div class="modal-footer">
                         <input class="btn btn-lg btn-block btn-primary" type="submit" value="Update">

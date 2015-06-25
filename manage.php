@@ -16,22 +16,22 @@
         $("#aarmsinfo").click(function()
         {
          $("#maindiv").load("ajax/armsinfo.php");
-        })
-    })
+        });
+    });
     $(document).ready(function()
     {
         $("#aarmsperson").click(function()
         {
          $("#maindiv").load("ajax/armsperson.php");
-        })
-    })
+        });
+    });
     $(document).ready(function()
     {
         $("#astorehouse").click(function()
         {
          $("#maindiv").load("ajax/storehouse.php");
-        })
-    })
+        });
+    });
     </script>
 </head>
 <body>

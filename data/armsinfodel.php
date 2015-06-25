@@ -18,7 +18,7 @@ if($num)
 	echo "
 	<script>
         alert('成功删除装备编号为:$_POST[delzbid]的装备');
-        window.history.back(-1);
+        window.close();
 	</script>
 	";
 }
@@ -27,7 +27,7 @@ else
 	echo "
 	<script>
   		alert('删除失败，请确认数据的正确性！');
-  		window.history.back(-1);
+  		window.close();
 	</script>
 	";
 }
