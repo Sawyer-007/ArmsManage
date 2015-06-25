@@ -1,3 +1,12 @@
+<?php
+//已登录页面，显示登录用户名
+if(!isset($_COOKIE['username'])){
+    echo 'You are Logged as '.$_COOKIE['username'].'<br/>';
+    //点击“Log Out”，则转到logOut.php页面进行cookie的注销
+}
+/**在已登录页面中，可以利用用户的cookie如$_COOKIE['username']、
+ * $_COOKIE['user_id']对数据库进行查询，可以做好多好多事情*/
+?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
