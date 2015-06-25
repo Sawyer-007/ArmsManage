@@ -35,9 +35,10 @@ if(isset($_POST['submit']))
 		echo "
 		<script>
 			alert('用户名/密码有误!');
+			window.history.back(-1); 
 		</script>
 		";
-		header("location: ../index.php");
+		//header("location: ../index.php");
 	}
 	//close conncet
 	mysqli_close($con);
@@ -47,8 +48,9 @@ else
 	echo "
 		<script>
 		alert('请合法登录!');
+		window.history.back(-1); 
 		</script>
 	";
-	header("location: ../index.php");
+	//header("location: ../index.php");
 }
 ?>

@@ -1,8 +1,5 @@
 <?php
 if(!isset($_COOKIE['username'])){
-    echo "<script>
-    alert('请登录!');
-    </script>";
     header("location: ../index.php");
 }
 ?>
@@ -40,6 +37,13 @@ if(!isset($_COOKIE['username'])){
          $("#maindiv").load("ajax/storehouse.php");
         });
     });
+    $(document).ready(function()
+    {
+        $("#adepartments").click(function()
+        {
+         $("#maindiv").load("ajax/departments.php");
+        });
+    });
     </script>
 </head>
 <body>
@@ -56,7 +60,7 @@ if(!isset($_COOKIE['username'])){
                         </a>
                         <ul class="dropdown-menu dropstyle" role="menu">
                             <li><a href="#" id="aarmsinfo">装备基本信息</a></li>
-                            <li><a href="#">部门基本信息</a></li>
+                            <li><a href="#" id="adepartments">部门基本信息</a></li>
                             <li><a href="#" id="aarmsperson">人员基本信息</a></li>
                         </ul>
                     </li>
