@@ -17,7 +17,12 @@ if (!$result) {
  exit();
 }
 
-echo "1 record added";
+echo "
+    <script>
+        alert('添加成功!');
+        window.close();
+	</script>
+	";
 //close conncet
 mysqli_close($con);
 ?>

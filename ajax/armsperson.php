@@ -6,8 +6,8 @@ echo '
             $("#armsinfoshow").click(function()
             {
             $("#tablediv").load("data/armsinfosel.php");
-            })
-        })
+            });
+        });
     </script>
 
     <h3 class="headstyle" id="headshow">人员基本信息</h3>
