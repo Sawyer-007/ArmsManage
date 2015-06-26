@@ -38,7 +38,7 @@ if(!isset($_COOKIE['username'])){
                         </a>
                         <ul class="dropdown-menu dropstyle" role="menu">
                             <li><a href="#" id="astorehouse">仓库信息管理</a></li>
-                            <li><a href="#">入库信息管理</a></li>
+                            <li><a href="#" id="astorein">入库信息管理</a></li>
                             <li><a href="#">出库信息管理</a></li>
                             <li><a href="#">装备库存管理</a></li>
                         </ul>

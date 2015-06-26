@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set('Asia/Chongqing');
+date_default_timezone_set("Asia/Chongqing");
 if(isset($_POST['submit']))
 {
 	$con = mysqli_connect("localhost","root","letmein");

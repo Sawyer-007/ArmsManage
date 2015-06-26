@@ -32,4 +32,30 @@ $(document).ready(function()
     {
         $("#maindiv").load("ajax/armsusers.php");
     });
-});        
+});
+$(document).ready(function()
+{
+    $("#astorein").click(function()
+    {
+        $("#maindiv").load("ajax/storein.php");
+    });
+});
+$(document).ready(function()
+{
+    $("#asyslog").click(function()
+    {
+        $("#maindiv").load("data/checklog.php");
+    });
+});
+function checkPwd()
+{
+    if ($("#inputNewpwd").val() == $("#inputCompwd").val())
+    {
+        return true;
+    }
+    else
+    {
+        alert("两次密码输入不一致!");
+        return false;
+    }
+}              

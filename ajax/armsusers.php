@@ -1,9 +1,9 @@
 <script>
     $(document).ready(function()
     {
-        $("#armsinfoshow").click(function()
+        $("#armsusersshow").click(function()
         {
-            $("#tablediv").load("data/armsinfosel.php");
+            $("#tablediv").load("data/armsuserssel.php");
         });
     });        
 </script>
@@ -11,9 +11,9 @@
 <h3 class="headstyle" id="headshow">用户管理</h3>
 <div class="container-fluid inmid" id="btndiv">
     <button type="button" class="btn btn-success btnstyle" data-toggle="modal" data-target="#addUserInfo">添加用户</button>
-    <button type="button" class="btn btn-warning btnstyle" data-toggle="modal" data-target="#updZbInfo">恢复密码</button>
-    <button type="button" class="btn btn-danger btnstyle" data-toggle="modal" data-target="#delZbInfo">删除用户</button>
-    <button type="button" class="btn btn-info btnstyle" id="armsinfoshow">查看用户</button>
+    <button type="button" class="btn btn-warning btnstyle" data-toggle="modal" data-target="#resetPasswd">恢复密码</button>
+    <button type="button" class="btn btn-danger btnstyle" data-toggle="modal" data-target="#delUserInfo">删除用户</button>
+    <button type="button" class="btn btn-info btnstyle" id="armsusersshow">查看用户</button>
 </div>
 
 <div class="tblstyle" id="tablediv">
@@ -24,13 +24,27 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">添加装备信息</h4>
+                <h4 class="modal-title">添加用户信息</h4>
             </div>
-            <form method="post" action="data/armsinfoins.php" target="_blank">
+            <form method="post" action="data/armsusersins.php" target="_blank" class="form-horizontal">
                 <div class="modal-body">
-                    <label>装备编号</label>
-                    <input type="text" id="inputZbid" name="zbid" class="form-control" placeholder="装备编号" required autofocus >
-                    <label>装备名称</label>
+                    <div class="form-group">
+                        <label for="inputUsersname" class="col-sm-4 control-label">用户名</label>
+                        <div class="col-sm-8">
+                            <input type="text" id="inputUsersname" name="usersname" class="form-control" placeholder="只允许英文" required autofocus >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">用户类型</label>
+                        <div class="col-sm-8">
+                            <label class="radio-inline">
+                                <input type="radio" name="type" id="inputTypes" value="surperadmin"> 管理员
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="type" id="inputTypeo" value="operator"> 操作员
+                            </label>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <input class="btn btn-lg btn-block btn-primary" type="submit" value="Add in">
@@ -41,17 +55,17 @@
     </div>
 </div>
 
-<div class="modal fade" id="delZbInfo" role="dialog">
+<div class="modal fade" id="delUserInfo" role="dialog">
     <div class="modal-dialog modalstyle">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">删除装备信息</h4>
+                <h4 class="modal-title">删除用户信息</h4>
             </div>
-            <form method="post" action="data/armsinfodel.php" target="_blank">
+            <form method="post" action="data/armsusersdel.php" target="_blank">
                 <div class="modal-body">
-                    <label>装备编号</label>
-                    <input type="text" id="inputDelZbid" name="delzbid" class="form-control" placeholder="装备编号" required autofocus >
+                    <label>用户名</label>
+                    <input type="text" id="inputDelUser" name="deluser" class="form-control" placeholder="用户名" required autofocus >
                 </div> 
                 <div class="modal-footer">
                     <input class="btn btn-lg btn-block btn-primary" type="submit" value="Delete">
@@ -62,17 +76,17 @@
     </div>
 </div>
 
-<div class="modal fade" id="updZbInfo" role="dialog">
+<div class="modal fade" id="resetPasswd" role="dialog">
     <div class="modal-dialog modalstyle">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">修改装备信息</h4>
+                <h4 class="modal-title">重置用户密码</h4>
             </div>
-            <form method="post" action="data/armsinfoupd.php" target="_blank">
+            <form method="post" action="data/armsusersupd.php" target="_blank">
                 <div class="modal-body">
-                    <label>装备编号</label>
-                    <input type="text" id="inputUpZbid" name="upzbid" class="form-control" placeholder="要修改的装备编号" required autofocus >
+                    <label>用户名</label>
+                    <input type="text" id="inputResUser" name="resuser" class="form-control" placeholder="用户名" required autofocus >
                 </div>
                 <div class="modal-footer">
                     <input class="btn btn-lg btn-block btn-primary" type="submit" value="Update">

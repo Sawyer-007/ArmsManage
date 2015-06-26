@@ -26,38 +26,97 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">添加人员信息</h4>
                 </div>
-                <form method="post" action="">
+                <form method="post" action="" class="form-horizontal">
                     <div class="modal-body">
-                        <label>人员编号</label>
-                        <input type="text" id="inputZbid" name="ryid" class="form-control" placeholder="部门名称" required autofocus >
-                        <label>姓名</label>
-                        <input type="text" id="inputZbname" name="ryname" class="form-control" placeholder="部门职能" required >
-                        <label>性别</label>
-                        <input type="text" id="inputZbspec" name="sex" class="form-control" placeholder="上级部门" required >
-                        <label>民族</label>
-                        <input type="text" id="inputZbname" name="nationaloty" class="form-control" placeholder="部门职能" required >
-                        <label>生日</label>
-                        <input type="text" id="inputZbspec" name="birth" class="form-control" placeholder="上级部门" required >
-                        <label>职务</label>
-                        <input type="text" id="inputZbname" name="title" class="form-control" placeholder="部门职能" required >
-                        <label>军衔</label>
-                        <input type="text" id="inputZbspec" name="rank" class="form-control" placeholder="上级部门" required >
-                        <label>政治面貌</label>
-                        <input type="text" id="inputZbname" name="political" class="form-control" placeholder="部门职能" required >
-                        <label>文化程度</label>
-                        <input type="text" id="inputZbspec" name="culture" class="form-control" placeholder="上级部门" required >
-                        <label>婚姻状况</label>
-                        <input type="text" id="inputZbname" name="marital" class="form-control" placeholder="部门职能" required >
-                        <label>籍贯</label>
-                        <input type="text" id="inputZbspec" name="family" class="form-control" placeholder="上级部门" required >
-                        <label>身份证号</label>
-                        <input type="text" id="inputZbname" name="idcard" class="form-control" placeholder="部门职能" required >
-                        <label>所在部门编号</label>
-                        <input type="text" id="inputZbspec" name="depid" class="form-control" placeholder="上级部门" required >
-                        <label>工作岗位</label>
-                        <input type="text" id="inputZbname" name="position" class="form-control" placeholder="部门职能" required >
-                        <label>部门领导编号</label>
-                        <input type="text" id="inputZbspec" name="upperid" class="form-control" placeholder="上级部门" required >
+                        <div class="form-group">
+                            <label for="inputRyid" class="col-sm-4 control-label">人员编号</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="inputRyid" name="ryid" class="form-control" placeholder="人员编号" required autofocus >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputRyname" class="col-sm-4 control-label">姓名</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="inputRyname" name="ryname" class="form-control" placeholder="部门职能" required >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">性别</label>
+                            <div class="col-sm-8">
+                                <label class="radio-inline">
+                                    <input type="radio" name="sex" id="inputRysexm" value="male"> 男
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="sex" id="inputRysexf" value="female"> 女
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputNationaloty" class="col-sm-4 control-label">民族</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="inputNationaloty" name="nationaloty" class="form-control" placeholder="部门职能" required >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputTitle" class="col-sm-4 control-label">职务</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="inputTitle" name="title" class="form-control" placeholder="部门职能" required >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputRank" class="col-sm-4 control-label">军衔</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="inputRank" name="rank" class="form-control" placeholder="上级部门" required >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPolitical" class="col-sm-4 control-label">政治面貌</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="inputPolitical" name="political" class="form-control" placeholder="部门职能" required >
+                            </div>
+                        </div>   
+                        <div class="form-group">
+                            <label for="inputCulture" class="col-sm-4 control-label">文化程度</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="inputCulture" name="culture" class="form-control" placeholder="上级部门" required >
+                            </div>
+                        </div>   
+                        <div class="form-group">
+                            <label for="inputMarital" class="col-sm-4 control-label">婚姻状况</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="inputMarital" name="marital" class="form-control" placeholder="部门职能" required >
+                            </div>
+                        </div>   
+                        <div class="form-group">
+                            <label for="inputFamily" class="col-sm-4 control-label">籍贯</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="inputFamily" name="family" class="form-control" placeholder="上级部门" required >
+                            </div>
+                        </div>                    
+                        <div class="form-group">
+                            <label for="inputIdcard" class="col-sm-4 control-label">身份证号</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="inputIdcard" name="idcard" class="form-control" placeholder="部门职能" required >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputDepid" class="col-sm-4 control-label">部门编号</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="inputDepid" name="depid" class="form-control" placeholder="上级部门" required >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputIdcard" class="col-sm-4 control-label">工作岗位</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="inputPosition" name="position" class="form-control" placeholder="部门职能" required >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputUpperid" class="col-sm-4 control-label">领导编号</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="inputUpperid" name="upperid" class="form-control" placeholder="上级部门" required >
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <input class="btn btn-lg btn-block btn-primary" type="submit" value="Add in">
