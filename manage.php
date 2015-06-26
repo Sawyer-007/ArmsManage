@@ -9,49 +9,10 @@ if(!isset($_COOKIE['username'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <meta name="description" content="Creating Modal Window with Bootstrap">
+    <title>管理界面</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/manage.css">
-    <script src="js/jquery.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <!-- javascript -->
-    <script>
-    $(document).ready(function()
-    {
-        $("#aarmsinfo").click(function()
-        {
-         $("#maindiv").load("ajax/armsinfo.php");
-        });
-    });
-    $(document).ready(function()
-    {
-        $("#aarmsperson").click(function()
-        {
-         $("#maindiv").load("ajax/armsperson.php");
-        });
-    });
-    $(document).ready(function()
-    {
-        $("#astorehouse").click(function()
-        {
-         $("#maindiv").load("ajax/storehouse.php");
-        });
-    });
-    $(document).ready(function()
-    {
-        $("#adepartments").click(function()
-        {
-         $("#maindiv").load("ajax/departments.php");
-        });
-    });
-    $(document).ready(function()
-    {
-        $("#aarmsusers").click(function()
-        {
-            $("#maindiv").load("ajax/armsusers.php");
-        });
-    });        
-    </script>
 </head>
 <body>
     <?php include 'header.php';?>
@@ -114,5 +75,8 @@ if(!isset($_COOKIE['username'])){
             </div>
         </div>
     </div>
+<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/load.js" type="text/javascript"></script>
 </body>
 </html>

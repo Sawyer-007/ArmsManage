@@ -1,0 +1,35 @@
+$(document).ready(function()
+{
+    $("#aarmsinfo").click(function()
+    {
+        $("#maindiv").load("ajax/armsinfo.php");
+    });
+});
+$(document).ready(function()
+{
+    $("#aarmsperson").click(function()
+    {
+        $("#maindiv").load("ajax/armsperson.php");
+    });
+});
+$(document).ready(function()
+{
+    $("#astorehouse").click(function()
+    {
+        $("#maindiv").load("ajax/storehouse.php");
+    });
+});
+$(document).ready(function()
+{
+    $("#adepartments").click(function()
+    {
+        $("#maindiv").load("ajax/departments.php");
+    });
+});
+$(document).ready(function()
+{
+    $("#aarmsusers").click(function()
+    {
+        $("#maindiv").load("ajax/armsusers.php");
+    });
+});        

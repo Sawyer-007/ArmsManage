@@ -5,8 +5,7 @@
             {
             $("#tablediv").load("data/armsinfosel.php");
             });
-        });
-        
+        });      
     </script>
 
     <h3 class="headstyle" id="headshow">装备基本信息</h3>
