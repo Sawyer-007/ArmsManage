@@ -1,6 +1,4 @@
-<?php
-echo '
-    <script>
+	<script>
         $(document).ready(function()
         {
             $("#departmentsshow").click(function()
@@ -89,5 +87,3 @@ echo '
             </div>
         </div>
     </div>
-    ';
-?>

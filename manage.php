@@ -44,6 +44,13 @@ if(!isset($_COOKIE['username'])){
          $("#maindiv").load("ajax/departments.php");
         });
     });
+    $(document).ready(function()
+    {
+        $("#aarmsusers").click(function()
+        {
+            $("#maindiv").load("ajax/armsusers.php");
+        });
+    });        
     </script>
 </head>
 <body>

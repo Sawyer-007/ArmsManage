@@ -27,7 +27,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="manage.php">进入系统</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">用户管理</a></li>
+                        <li><a href="#" id="aarmsusers">用户管理</a></li>
                         <li><a href="#">日志管理</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#">修改密码</a></li>

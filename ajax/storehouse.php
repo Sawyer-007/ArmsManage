@@ -1,5 +1,3 @@
-<?php
-echo '
     <script>
         $(document).ready(function()
         {
@@ -45,5 +43,3 @@ echo '
             </div>
         </div>
     </div>
-    ';
-?>
