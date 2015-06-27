@@ -6,7 +6,6 @@ if (!$con)
   }
 //do something
 $id = $_POST['siid'];
-$sitype = $_POST['sitype'];
 $zbid = $_POST['zbid'];
 $makedate = $_POST['makedate'];
 $zbprice = $_POST['zbprice'];
@@ -19,20 +18,29 @@ $memo = $_POST['memo'];
 
 mysqli_set_charset($con, "utf8");
 mysqli_select_db($con, "armsdata");
+date_default_timezone_set("Asia/Chongqing");
 
-$sql = "update storein set sitype = '$sitype', zbid = '$zbid' , makedate = '$makedate' , zbprice = '$zbprice' , zbnum = '$zbnum' , sid = '$sid' , ryname1 = '$ryname1' , ryname = '$ryname' , optdate = '$optdate' , memo = '$memo' where siid = '$id'";
+$sql = "update storein set zbid = '$zbid' , makedate = '$makedate' , zbprice = '$zbprice' , zbnum = '$zbnum' , sid = '$sid' , rynamei = '$ryname1' , ryname = '$ryname' , optdate = '$optdate' , memo = '$memo' where siid = '$id'";
 
 $result = mysqli_query($con,$sql);
 if (!$result) {
  printf("Error: %s\n", mysqli_error($con));
  exit();
 }
-echo "
+else
+{
+	$logTitle="storein";
+  	$logDate=date("Y-m-d", time());
+  	$logTime=date("H:i:s", time());
+  	$logsql="insert into syslog values(null,'$logDate','$logTime',3,'$logTitle','$id','$_COOKIE[username]')";
+  	mysqli_query($con,$logsql);
+  	echo "
     <script>
         alert('修改成功!');
         window.close();
 	</script>
 	";
+}
 //close conncet
 mysqli_close($con);
  ?>

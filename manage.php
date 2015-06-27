@@ -40,7 +40,7 @@ if(!isset($_COOKIE['username'])){
                             <li><a href="#" id="astorehouse">仓库信息管理</a></li>
                             <li><a href="#" id="astorein">入库信息管理</a></li>
                             <li><a href="#" id="atakeout">出库信息管理</a></li>
-                            <li><a href="#">装备库存管理</a></li>
+                            <li><a href="#" id="aarmssurplus">装备库存盘点</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">

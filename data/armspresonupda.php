@@ -21,14 +21,13 @@ else
 $sql = "update armsperson set ryname='$_POST[ryname]', sex='$gender', Nationality='$_POST[nationaloty]', Birth='$_POST[bitrh]',Title='$_POST[title]',Rank='$_POST[rank]',Political_Party='$_POST[political]',Culture_Level='$_POST[culture]',Marital_Condition='$_POST[marital]',Family_Place='$_POST[family]', Id_Card='$_POST[idcard]',Dep_Id='$_POST[depid]',Position='$_POST[position]',UpperId='$_POST[upperid]' where ryid = '$id'";
 $result = mysqli_query($con,$sql);
 
-date_default_timezone_set("Asia/Chongqing");
-
 if (!$result) {
  printf("Error: %s\n", mysqli_error($con));
  exit();
 }
 else
 {
+  date_default_timezone_set("Asia/Chongqing");
   $logTitle="armsperson";
   $logDate=date("Y-m-d", time());
   $logTime=date("H:i:s", time());

@@ -5,7 +5,7 @@ if (!$con)
   die('Could not connect: ' . mysql_error());
   }
 //do something
-$id = $_POST['uptoid'];
+$id = $_POST['uptid'];
 mysqli_set_charset($con, "utf8");
 mysqli_select_db($con, "armsdata");
 $qsql="select * from takeout where toid = '$id'";
@@ -35,8 +35,6 @@ if($num)
   <div class='container-fluid'>
     <form class='form-update well' method='post' action='../data/takeoutupda.php'>
       <p class='head'>出库编号:&nbsp;&nbsp;<input type='text' name = 'toid' value = '$id' readonly ></p>
-      <label>出库类型</label>
-      <input type='text' id='inputsitype' name='ttype' class='form-control' value = '$ttype' required autofocus >
       <label>出库装备编号</label>
       <input type='text' id='inputzbid' name='zbid' class='form-control' value = '$zbid' required >
       <label>出库装备单价</label>
@@ -45,16 +43,14 @@ if($num)
       <input type='text' id='inputzbnum' name='zbnum' class='form-control' value = '$zbnum' required >
       <label>仓库编号</label>
       <input type='text' id='inputsid' name='sid' class='form-control' value = '$sid' required >
-
       <label>批准人</label>
       <input type='text' id='inputryname1' name='ryname1' class='form-control' value = '$ryname1' required >
       <label>经办人</label>
       <input type='text' id='inputryname' name='ryname' class='form-control' value = '$ryname' required >
       <label>出库时间</label>
-      <input type='text' id='inputoptdate' name='optdate' class='form-control' value = '$optdate' required >
-      
+      <input type='text' id='inputoptdate' name='optdate' class='form-control' value = '$optdate' required >    
       <label>备注</label>
-      <input type='text' id='inputmemo' name='memo' class='form-control' value = '$memo' required >
+      <input type='text' id='inputmemo' name='memo' class='form-control' value = '$memo' >
 
       <input class='btn btn-lg btn-block btn-primary sub' type='submit' value='Submit !'>
     </form>

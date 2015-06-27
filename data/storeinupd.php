@@ -36,8 +36,6 @@ if($num)
   <div class='container-fluid'>
     <form class='form-update well' method='post' action='../data/storeinupda.php'>
       <p class='head'>入库编号:&nbsp;&nbsp;<input type='text' name = 'siid' value = '$id' readonly ></p>
-      <label>入库类型</label>
-      <input type='text' id='inputsitype' name='sitype' class='form-control' value = '$sitype' required autofocus >
       <label>入库装备编号</label>
       <input type='text' id='inputzbid' name='zbid' class='form-control' value = '$zbid' required >
       <label>生产日期</label>
@@ -52,12 +50,12 @@ if($num)
       <label>验收人</label>
       <input type='text' id='inputryname1' name='ryname1' class='form-control' value = '$ryname1' required >
       <label>经办人</label>
-      <input type='text' id='inputryname' name='ryname' class='form-control' value = '$ryname' required >
+      <input type='text' id='inputryname' name='ryname' class='form-control' value = '$ryname' >
       <label>入库时间</label>
       <input type='text' id='inputoptdate' name='optdate' class='form-control' value = '$optdate' required >
       
       <label>备注</label>
-      <input type='text' id='inputmemo' name='memo' class='form-control' value = '$memo' required >
+      <input type='text' id='inputmemo' name='memo' class='form-control' value = '$memo' >
 
       <input class='btn btn-lg btn-block btn-primary sub' type='submit' value='Submit !'>
     </form>

@@ -11,7 +11,6 @@ date_default_timezone_set("Asia/Chongqing");
 
 $logDate=date("Y-m-d", time());
 $sql="insert into storein values(null,null,'$_POST[zbid]','$_POST[makedate]','$_POST[zbprice]','$_POST[zbnum]','$_POST[sid]','$_POST[ryname1]','$_COOKIE[username]','$logDate','$_POST[memo]')";
-
 $result = mysqli_query($con,$sql);
 
 if (!$result) {
@@ -25,6 +24,7 @@ else
 	$logTime=date("H:i:s", time());
 	$logsql="insert into syslog values(null,'$logDate','$logTime',1,'$logTitle','$id','$_COOKIE[username]')";
 	mysqli_query($con,$logsql);
+	$addsql=""
 	echo "
     <script>
         alert('添加成功!');

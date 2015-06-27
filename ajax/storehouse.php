@@ -10,10 +10,18 @@
 
     <h3 class="headstyle" id="headshow">仓库信息管理</h3>
     <div class="container-fluid inmid" id="btndiv">
-        <button type="button" class="btn btn-success btnstyle" data-toggle="modal" data-target="#addZbInfo">添加仓库</button>
-        <button type="button" class="btn btn-warning btnstyle" data-toggle="modal" data-target="#updZbInfo">修改仓库</button>
-        <button type="button" class="btn btn-danger btnstyle" data-toggle="modal" data-target="#delZbInfo">删除仓库</button>
-        <button type="button" class="btn btn-info btnstyle" id="storehouseshow">查看仓库</button>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-success btnstyle" data-toggle="modal" data-target="#addZbInfo">添加信息</button>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-warning btnstyle" data-toggle="modal" data-target="#updZbInfo">修改信息</button>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-danger btnstyle" data-toggle="modal" data-target="#delZbInfo">删除信息</button>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-info btnstyle" id="storehousesel">查看信息</button>
+        </div>
     </div>
 
     <div class="tblstyle" id="tablediv">

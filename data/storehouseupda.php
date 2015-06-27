@@ -17,12 +17,21 @@ if (!$result) {
  printf("Error: %s\n", mysqli_error($con));
  exit();
 }
-echo "
+else
+{
+  date_default_timezone_set("Asia/Chongqing");
+  $logTitle="armsperson";
+  $logDate=date("Y-m-d", time());
+  $logTime=date("H:i:s", time());
+  $logsql="insert into syslog values(null,'$logDate','$logTime',3,'$logTitle','$id','$_COOKIE[username]')";
+	mysqli_query($con,$logsql);
+	echo "
     <script>
         alert('修改成功!');
         window.close();
 	</script>
 	";
+}
 //close conncet
 mysqli_close($con);
  ?>

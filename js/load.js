@@ -54,6 +54,13 @@ $(document).ready(function()
         $("#maindiv").load("ajax/takeout.php");
     });
 });
+$(document).ready(function()
+{
+    $("#aarmssurplus").click(function()
+    {
+        $("#maindiv").load("ajax/armssurplus.php");
+    });
+});
 function checkPwd()
 {
     if ($("#inputNewpwd").val() == $("#inputCompwd").val())
