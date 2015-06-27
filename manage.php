@@ -39,7 +39,7 @@ if(!isset($_COOKIE['username'])){
                         <ul class="dropdown-menu dropstyle" role="menu">
                             <li><a href="#" id="astorehouse">仓库信息管理</a></li>
                             <li><a href="#" id="astorein">入库信息管理</a></li>
-                            <li><a href="#">出库信息管理</a></li>
+                            <li><a href="#" id="atakeout">出库信息管理</a></li>
                             <li><a href="#">装备库存管理</a></li>
                         </ul>
                     </li>
@@ -67,8 +67,24 @@ if(!isset($_COOKIE['username'])){
                 </ul>
 
                 <ul class="nav nav-sidebar">
-                    <li><a href="#">调拨维修</a></li>
-                    <li><a href="#">统计查询</a></li>
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                        调拨维修 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropstyle" role="menu">
+                            <li><a href="#">装备维修管理</a></li>
+                            <li><a href="#">装备调拨管理</a></li>
+                        </ul>
+                    </li>
+                    <li role="presentation" class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                        调拨维修 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu dropstyle" role="menu">
+                            <li><a href="#">装备维修管理</a></li>
+                            <li><a href="#">装备调拨管理</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="col-lg-10 main pull-right" id="maindiv">

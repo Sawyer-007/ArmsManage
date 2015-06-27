@@ -9,7 +9,15 @@ mysqli_select_db($con, "armsdata");
 mysqli_set_charset($con, "utf8");
 date_default_timezone_set("Asia/Chongqing");
 $id=$_POST['ryid'];
-$sql="insert into armsperson values('$id','$_POST[ryname]',null,'$_POST[sex]','$_POST[nationaloty]','$_POST[bitrh]','$_POST[title]','$_POST[rank]','$_POST[political]','$_POST[culture]','$_POST[marital]','$_POST[family]','$_POST[idcard]','$_POST[depid]','$_POST[position]','$_POST[upperid]')";
+if($_POST['sex'] == 'male')
+{
+	$gender='男';
+}
+else
+{
+	$gender='女';
+}
+$sql="insert into armsperson values('$id','$_POST[ryname]',null,'$gender','$_POST[nationaloty]','$_POST[bitrh]','$_POST[title]','$_POST[rank]','$_POST[political]','$_POST[culture]','$_POST[marital]','$_POST[family]','$_POST[idcard]','$_POST[depid]','$_POST[position]','$_POST[upperid]')";
 $result = mysqli_query($con,$sql);
 
 if (!$result) {

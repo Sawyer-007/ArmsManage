@@ -10,10 +10,18 @@
 
     <h3 class="headstyle" id="headshow">部门基本信息</h3>
     <div class="container-fluid inmid" id="btndiv">
-        <button type="button" class="btn btn-success btnstyle" data-toggle="modal" data-target="#addZbInfo">添加信息</button>
-        <button type="button" class="btn btn-warning btnstyle" data-toggle="modal" data-target="#updZbInfo">修改信息</button>
-        <button type="button" class="btn btn-danger btnstyle" data-toggle="modal" data-target="#delZbInfo">删除信息</button>
-        <button type="button" class="btn btn-info btnstyle" id="departmentsshow">查看信息</button>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-success btnstyle" data-toggle="modal" data-target="#addZbInfo">添加信息</button>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-warning btnstyle" data-toggle="modal" data-target="#updZbInfo">修改信息</button>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-danger btnstyle" data-toggle="modal" data-target="#delZbInfo">删除信息</button>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-info btnstyle" id="departmentsshow">查看信息</button>
+        </div>
     </div>
 
     <div class="tblstyle" id="tablediv">

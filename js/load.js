@@ -44,7 +44,14 @@ $(document).ready(function()
 {
     $("#asyslog").click(function()
     {
-        $("#maindiv").load("data/checklog.php");
+        $("#maindiv").load("ajax/checklog.php");
+    });
+});
+$(document).ready(function()
+{
+    $("#atakeout").click(function()
+    {
+        $("#maindiv").load("ajax/takeout.php");
     });
 });
 function checkPwd()

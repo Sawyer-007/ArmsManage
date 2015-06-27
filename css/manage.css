@@ -39,16 +39,19 @@
     padding-bottom:10px;
 }
 .inmid{
-    text-align:center;
+    padding-top:20px;
+    margin-right:20px;
 }
 .btnstyle{
     width:200px;
     height:50px;
-    margin-right:50px;
-    margin-top:20px;
     font-family:'Microsoft YaHei UI';
     font-size:16px;
     font-family:'Microsoft YaHei UI';
+}
+.btndrop{
+    margin-left:15px;
+    width:200px;
 }
 .tblstyle{
     margin-top:40px;
