@@ -15,6 +15,11 @@ $num = mysqli_num_rows($qresult);
 if($num)
 {
 	mysqli_query($con,$dsql);
+	date_default_timezone_set("Asia/Chongqing");
+	$logTitle="departments";
+	$logDate=date("Y-m-d", time());
+	$logTime=date("H:i:s", time());
+	$logsql="insert into syslog values(null,'$logDate','$logTime',2,'$logTitle','$id','$_COOKIE[username]')";
 	echo "
 	<script>
         alert('成功删除装备编号为:$_POST[depid]的部门');

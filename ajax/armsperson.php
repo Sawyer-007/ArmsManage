@@ -10,7 +10,7 @@
 
     <h3 class="headstyle" id="headshow">人员基本信息</h3>
     <div class="container-fluid inmid" id="btndiv">
-        <button type="button" class="btn btn-success btnstyle" data-toggle="modal" data-target="#addZbInfo">添加信息</button>
+        <button type="button" class="btn btn-success btnstyle" data-toggle="modal" data-target="#addPersonInfo">添加信息</button>
         <button type="button" class="btn btn-warning btnstyle">修改信息</button>
         <button type="button" class="btn btn-danger btnstyle">删除信息</button>
         <button type="button" class="btn btn-info btnstyle" id="armsinfoshow">查看信息</button>
@@ -19,14 +19,14 @@
     <div class="tblstyle" id="tablediv">
     </div>
     <!-- Modal -->
-    <div class="modal fade" id="addZbInfo" role="dialog">
+    <div class="modal fade" id="addPersonInfo" role="dialog">
         <div class="modal-dialog modalstyle">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">添加人员信息</h4>
                 </div>
-                <form method="post" action="" class="form-horizontal">
+                <form method="post" action="data/armspersonins.php" class="form-horizontal" target="_blank">
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="inputRyid" class="col-sm-4 control-label">人员编号</label>
@@ -55,6 +55,12 @@
                             <label for="inputNationaloty" class="col-sm-4 control-label">民族</label>
                             <div class="col-sm-8">
                                 <input type="text" id="inputNationaloty" name="nationaloty" class="form-control" placeholder="部门职能" required >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputBitrh" class="col-sm-4 control-label">生日</label>
+                            <div class="col-sm-8">
+                                <input type="text" id="inputBitrh" name="bitrh" class="form-control" placeholder="Example:19700101" required >
                             </div>
                         </div>
                         <div class="form-group">

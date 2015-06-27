@@ -28,8 +28,6 @@
                 </div>
                 <form method="post" action="data/departmentsins.php" target="_blank">
                     <div class="modal-body">
-                        <label>部门编号</label>
-                        <input type="text" id="inputDepId" name="depid" class="form-control" placeholder="Example:20150001" required autofocus >
                         <label>部门名称</label>
                         <input type="text" id="inputDepName" name="depname" class="form-control" placeholder="Example:人事部" required >
                         <label>部门职能</label>
