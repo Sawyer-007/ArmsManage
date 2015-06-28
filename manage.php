@@ -48,10 +48,10 @@ if(!isset($_COOKIE['username'])){
                         装备资料管理 <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu dropstyle" role="menu">
-                            <li><a href="#">资料类型管理</a></li>
-                            <li><a href="#">资料信息管理</a></li>
-                            <li><a href="#">资料借阅管理</a></li>
-                            <li><a href="#">资料归档管理</a></li>
+                            <li><a href="#" id="">资料类型管理</a></li>
+                            <li><a href="#" id="aarmsdata">资料信息管理</a></li>
+                            <li><a href="#" id="adatalend">资料借阅管理</a></li>
+                            <li><a href="#" id="adatain">资料归档管理</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">
@@ -60,8 +60,8 @@ if(!isset($_COOKIE['username'])){
                         </a>
                         <ul class="dropdown-menu dropstyle" role="menu">
                             <li><a href="#">经费明细管理</a></li>
-                            <li><a href="#">经费入账管理</a></li>
-                            <li><a href="#">经费使用管理</a></li>
+                            <li><a href="#" id="aoutlayin">经费入账管理</a></li>
+                            <li><a href="#" id="aoutlaycost">经费使用管理</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -69,23 +69,46 @@ if(!isset($_COOKIE['username'])){
                 <ul class="nav nav-sidebar">
                     <li role="presentation" class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                        调拨维修 <span class="caret"></span>
+                        调拨与维修 <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu dropstyle" role="menu">
-                            <li><a href="#">装备维修管理</a></li>
-                            <li><a href="#">装备调拨管理</a></li>
+                            <li><a href="#" id="aarmsrepair">装备维修管理</a></li>
+                            <li><a href="#" id="aarmsallo">装备调拨管理</a></li>
                         </ul>
                     </li>
                     <li role="presentation" class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                        调拨维修 <span class="caret"></span>
+                        统计与查询 <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu dropstyle" role="menu">
-                            <li><a href="#">装备维修管理</a></li>
-                            <li><a href="#">装备调拨管理</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#viewStore">出库入库统计</a></li>
+                            <li><a href="#">库存流水统计</a></li>
+                            <li><a href="#">部门人员查询</a></li>
+                            <li><a href="#">经费汇总查询</a></li>
                         </ul>
                     </li>
                 </ul>
+            </div>
+
+            <div class="modal fade" id="viewStore" role="dialog">
+                <div class="modal-dialog modalstyle">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">出库入库统计</h4>
+                        </div>
+                        <form method="post" action="ajax/storeinfo.php" target="_blank">
+                            <div class="modal-body">
+                                <label>装备名称</label>
+                                <input type="text" id="inputZbname" name="zbname" class="form-control" placeholder="支持模糊查询" required autofocus >
+                            </div> 
+                            <div class="modal-footer">
+                                <input class="btn btn-lg btn-block btn-primary" type="submit" value="View" id="loadtable">
+                                    <!-- <span class="glyphicon glyphicon-log-in pull-left"></span>Sign in -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-10 main pull-right" id="maindiv">
             </div>

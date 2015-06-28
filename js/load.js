@@ -61,6 +61,55 @@ $(document).ready(function()
         $("#maindiv").load("ajax/armssurplus.php");
     });
 });
+$(document).ready(function()
+{
+    $("#aarmsrepair").click(function()
+    {
+        $("#maindiv").load("ajax/armsrepair.php");
+    });
+});
+$(document).ready(function()
+{
+    $("#aarmsallo").click(function()
+    {
+        $("#maindiv").load("ajax/armsallo.php");
+    });
+});
+$(document).ready(function()
+{
+    $("#aarmsdata").click(function()
+    {
+        $("#maindiv").load("ajax/armsdata.php");
+    });
+});
+$(document).ready(function()
+{
+    $("#adatalend").click(function()
+    {
+        $("#maindiv").load("ajax/datalend.php");
+    });
+});
+$(document).ready(function()
+{
+    $("#adatain").click(function()
+    {
+        $("#maindiv").load("ajax/datain.php");
+    });
+});
+$(document).ready(function()
+{
+    $("#aoutlayin").click(function()
+    {
+        $("#maindiv").load("ajax/outlayin.php");
+    });
+});
+$(document).ready(function()
+{
+    $("#aoutlaycost").click(function()
+    {
+        $("#maindiv").load("ajax/outlaycost.php");
+    });
+});
 function checkPwd()
 {
     if ($("#inputNewpwd").val() == $("#inputCompwd").val())

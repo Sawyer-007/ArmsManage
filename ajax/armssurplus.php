@@ -1,9 +1,9 @@
     <script>
         $(document).ready(function()
         {
-            $("#armsinfoshow").click(function()
+            $("#armssurplus").click(function()
             {
-            $("#tablediv").load("data/armssurplus.php");
+            $("#tablediv").load("data/armssurplussel.php");
             });
         });      
     </script>
@@ -28,10 +28,10 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">修改库存信息</h4>
                 </div>
-                <form method="post" action="data/armsinfoupd.php" target="_blank">
+                <form method="post" action="data/armssurplusupd.php" target="_blank">
                     <div class="modal-body">
-                        <label>装备编号</label>
-                        <input type="text" id="inputUpZbid" name="upzbid" class="form-control" placeholder="要修改的装备编号" required autofocus >
+                        <label for="inputUpSpid">库存编号</label>
+                        <input type="text" id="inputUpSpid" name="spid" class="form-control" placeholder="要修改的装备编号" required autofocus >
                     </div>
                     <div class="modal-footer">
                         <input class="btn btn-lg btn-block btn-primary" type="submit" value="Update">

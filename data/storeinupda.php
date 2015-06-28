@@ -29,7 +29,7 @@ if (!$result) {
 }
 else
 {
-	$logTitle="storein";
+	  $logTitle="storein";
   	$logDate=date("Y-m-d", time());
   	$logTime=date("H:i:s", time());
   	$logsql="insert into syslog values(null,'$logDate','$logTime',3,'$logTitle','$id','$_COOKIE[username]')";

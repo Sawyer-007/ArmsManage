@@ -9,7 +9,7 @@ if (!$con)
 mysqli_select_db($con, "armsdata");
 mysqli_set_charset($con, "utf8");
 
-$sql = "select * from armssurplus";
+$sql = "select * from datalend";
 $result = mysqli_query($con,$sql);
 
 if (!$result) {
@@ -19,26 +19,26 @@ if (!$result) {
 echo "<table class='table table-striped'>";
 echo "<thead>
   <tr>
-    <th>库存编号</th>
-    <th>装备编号</th>
-    <th>装备单价</th>
-    <th>装备数量</th>
-    <th>生产日期</th>
-    <th>仓库编号</th>
-    <th>备注</th>
-  </tr>
+    <th>借阅号</th>
+    <th>资料编号</th>
+    <th>借阅日期</th>
+    <th>借阅人编号</th>
+    <th>借阅数量</th>
+    <th>批准人</th>
+    <th>标记</th>
+ </tr>
 </thead>";
 
 while($row = mysqli_fetch_array($result))
   {
   echo "<tr>";
-  echo "<td>" . $row[0] . "</td>";
-  echo "<td>" . $row[1] . "</td>";
-  echo "<td>" . $row[2] . "</td>";
-  echo "<td>" . $row[3] . "</td>";
-  echo "<td>" . $row[4] . "</td>";
-  echo "<td>" . $row[5] . "</td>";
-  echo "<td>" . $row[6] . "</td>";
+  echo "<td>" . $row['id'] . "</td>";
+  echo "<td>" . $row['datano'] . "</td>";
+  echo "<td>" . $row['lenddate'] . "</td>";
+  echo "<td>" . $row['ryid'] . "</td>";
+  echo "<td>" . $row['lendcount '] . "</td>";
+  echo "<td>" . $row['ryname'] . "</td>";
+  echo "<td>" . $row['flag'] . "</td>";
   echo "</tr>";
   }
 echo "</table>";
