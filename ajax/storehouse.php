@@ -20,7 +20,7 @@
             <button type="button" class="btn btn-danger btnstyle" data-toggle="modal" data-target="#delZbInfo">删除信息</button>
         </div>
         <div class="col-md-3">
-            <button type="button" class="btn btn-info btnstyle" id="storehousesel">查看信息</button>
+            <button type="button" class="btn btn-info btnstyle" id="storehouseshow">查看信息</button>
         </div>
     </div>
 
@@ -34,10 +34,8 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">添加仓库信息</h4>
                 </div>
-                <form method="post" action="data/storehouseins.php">
+                <form method="post" action="data/storehouseins.php" target="_blank">
                     <div class="modal-body">
-                        <label>仓库编号</label>
-                        <input type="text" id="inputSid" name="sid" class="form-control" placeholder="Example:00001" required autofocus >
                         <label>仓库名称</label>
                         <input type="text" id="inputSname" name="sname" class="form-control" placeholder="Example:东区仓库" required>
                         <label>仓库说明</label>
@@ -57,7 +55,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">删除装备信息</h4>
+                    <h4 class="modal-title">删除仓库信息</h4>
                 </div>
                 <form method="post" action="data/storehousedel.php" target="_blank">
                     <div class="modal-body">

@@ -13,7 +13,7 @@
                 if(!isset($_COOKIE['username']))
                 { 
                 ?>
-                <li class="active"><a href="#divLogin" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;登录</a></li>
+                <li class="active"><a href="#" data-toggle="modal" data-target="#divLogin"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;登录</a></li>
                 <?php 
                 }
                 else if(strcmp($_COOKIE['usertype'], 'superadmin') == 0)

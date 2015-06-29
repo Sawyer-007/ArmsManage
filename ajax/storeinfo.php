@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="col-lg-12 main" id="maindiv">
-	<h3 class="headstyle" id="headshow">系统操作日志</h3>
+	<h3 class="headstyle" id="headshow">出入库统计</h3>
 	<p class="ptime">当前时间为:<?php echo date("Y-m-d H:i:s", time()); ?></p>
 	<div class="tblstyle" id="tablediv">
 	<?php
@@ -26,7 +26,7 @@
 		mysqli_set_charset($con, "utf8");
 
 		$name=$_POST['zbname'];
-		$armssql = "select zbid,zbname from armsinfo where zbname='$name' ";
+		$armssql = "select zbid,zbname from armsinfo where zbname like '$name%' ";
 		$armsresult = mysqli_query($con,$armssql);
 		if (!$armsresult) {
 		 printf("Error: %s\n", mysqli_error($con));
@@ -60,7 +60,7 @@
 		  	echo "<td>  </td>"; //时间
 		  	echo "</tr>";
 		  	$insql="select zbnum,optdate from storein where zbid = '$row[0]' and sid = '$prow[1]'";
-		  	$outsql="select zbnum,optdate from storein where zbid = '$row[0]' and sid = '$prow[1]'";
+		  	$outsql="select zbnum,optdate from takeout where zbid = '$row[0]' and sid = '$prow[1]'";
 		  	$inresult = mysqli_query($con,$insql);
 		  	$outresult = mysqli_query($con,$outsql);
 		  	while($irow = mysqli_fetch_array($inresult))

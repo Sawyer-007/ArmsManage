@@ -13,7 +13,7 @@ $dsql="delete from storehouse where sid = '$id'";
 $qresult = mysqli_query($con,$qsql);
 $num = mysqli_num_rows($qresult);
 date_default_timezone_set("Asia/Chongqing");
-$logTitle="armsperson";
+$logTitle="storehouse";
 $logDate=date("Y-m-d", time());
 $logTime=date("H:i:s", time());
 $logsql="insert into syslog values(null,'$logDate','$logTime',2,'$logTitle','$id','$_COOKIE[username]')";

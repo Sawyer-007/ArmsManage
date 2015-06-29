@@ -9,7 +9,7 @@ mysqli_select_db($con, "armsdata");
 mysqli_set_charset($con, "utf8");
 date_default_timezone_set("Asia/Chongqing");
 
-$sql="insert into storehouse values('$_POST[sid]','$_POST[sname]','$_POST[memo]')";
+$sql="insert into storehouse values(null,'$_POST[sname]','$_POST[memo]')";
 
 $result = mysqli_query($con,$sql);
 
@@ -18,7 +18,8 @@ if (!$result) {
  exit();
 }
 else{
-	$logTitle="armsperson";
+	$id=mysqli_insert_id($con);
+	$logTitle="storehouse";
 	$logDate=date("Y-m-d", time());
 	$logTime=date("H:i:s", time());
 	$logsql="insert into syslog values(null,'$logDate','$logTime',1,'$logTitle','$id','$_COOKIE[username]')";

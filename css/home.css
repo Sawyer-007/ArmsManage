@@ -2,6 +2,7 @@ body{
     padding-top: 60px;
     padding-bottom: 40px;
     background-color: #eee;
+
 }
 .forgetPsw{
     font-weight: normal;
@@ -36,4 +37,39 @@ body{
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+}
+.mainwind{
+    height:750px;
+}
+.bg{
+    margin-left:-15px;
+    margin-top:-10px;
+    height:800px;
+    width:100%;
+    position:absolute;
+    background-position:center center;
+    background-size:cover;
+}
+#bgdiv{
+    background-image: url(/src/back.jpg);
+}
+.bghead{
+    font-family:'Microsoft YaHei UI';
+    margin-top:220px;
+    color:#ffffff;
+    font-size:50px;
+}
+.bgp{
+    color:#ffffff;
+    font-family:'Microsoft YaHei UI';
+    font-size:16px;
+    margin-top:20px;
+}
+.btnstyle{
+    width:200px;
+    height:50px;
+    font-family:'Microsoft YaHei UI';
+    font-size:18px;
+    margin-top:90px;
+    margin-left:300px;
 }

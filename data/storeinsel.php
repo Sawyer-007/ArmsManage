@@ -35,8 +35,8 @@ echo "<thead>
 while($row = mysqli_fetch_array($result))
   {
   echo "<tr>";
-  echo "<td>" . $row['SiId'] . "</td>";
-  echo "<td>" . $row['Zbid'] . "</td>";
+  echo "<td>" . $row[0] . "</td>";
+  echo "<td>" . $row[2] . "</td>";
   echo "<td>" . $row['MakeDate'] . "</td>";
   echo "<td>" . $row['Zbprice'] . "</td>";
   echo "<td>" . $row['Zbnum'] . "</td>";

@@ -12,7 +12,28 @@
 <body>
     <!-- Navbar -->
     <?php include 'header.php';?>
-
+    <div class="container-fluid">
+    	<div class="mianwind">
+    		<div class="bg" id="bgdiv"></div>
+    		<div class="col-md-6 col-md-offset-6">
+    			<h1 class="bghead">秩序与管理</h1>
+    			<p class="bgp">无规矩不成方圆，有管理则规矩俱全</p>
+    			<?php
+    			if(!isset($_COOKIE['username'])) 
+    			{
+    			?>
+    			<button type="button" class="btn btn-success btnstyle" id="armssurplus" data-toggle="modal" data-target="#divLogin">Sign in</button>
+    			<?php
+    			}
+    			else{
+    			?>
+    			<input type="button" class="btn btn-success btnstyle" onclick="location.href='manage.php'" value="进入系统">
+    			<?php 
+    			}
+    			?>
+    		</div>
+    	</div>
+    </div>
     <!-- Modal -->
     <div class="modal fade" id="divLogin">
         <div class="modal-dialog loginModal">

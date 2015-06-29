@@ -20,7 +20,7 @@ if (!$result) {
 else
 {
   date_default_timezone_set("Asia/Chongqing");
-  $logTitle="armsperson";
+  $logTitle="storehouse";
   $logDate=date("Y-m-d", time());
   $logTime=date("H:i:s", time());
   $logsql="insert into syslog values(null,'$logDate','$logTime',3,'$logTitle','$id','$_COOKIE[username]')";
