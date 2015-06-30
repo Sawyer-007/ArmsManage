@@ -10,11 +10,19 @@
 
 <h3 class="headstyle" id="headshow">用户管理</h3>
 <div class="container-fluid inmid" id="btndiv">
-    <button type="button" class="btn btn-success btnstyle" data-toggle="modal" data-target="#addUserInfo">添加用户</button>
-    <button type="button" class="btn btn-warning btnstyle" data-toggle="modal" data-target="#resetPasswd">恢复密码</button>
-    <button type="button" class="btn btn-danger btnstyle" data-toggle="modal" data-target="#delUserInfo">删除用户</button>
-    <button type="button" class="btn btn-info btnstyle" id="armsusersshow">查看用户</button>
-</div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-success btnstyle" data-toggle="modal" data-target="#addUserInfo">添加用户</button>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-warning btnstyle" data-toggle="modal" data-target="#resetPasswd">重置密码</button>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-danger btnstyle" data-toggle="modal" data-target="#delUserInfo">删除用户</button>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-info btnstyle" id="armsusersshow">查看信息</button>
+        </div>
+    </div>
 
 <div class="tblstyle" id="tablediv">
 </div>

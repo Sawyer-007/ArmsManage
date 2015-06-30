@@ -135,7 +135,7 @@
                         <div class="form-group">
                             <label for="inputUpperid" class="col-sm-4 control-label">领导编号</label>
                             <div class="col-sm-8">
-                                <input type="text" id="inputUpperid" name="upperid" class="form-control" placeholder="领导编号" required >
+                                <input type="text" id="inputUpperid" name="upperid" class="form-control" placeholder="领导编号" >
                             </div>
                         </div>
                     </div>
